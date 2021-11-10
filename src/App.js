@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Businessacc from "./components/Businessacc";
+import Card from "./components/Card";
+import Header from "./components/Header";
+import Overview from "./components/Overview";
+import Recommended from "./components/Recommended";
+import Sidebar from "./components/Sidebar";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-screen h-screen flex flex-row">
+      <Sidebar />
+      <div>
+        <div className="">
+        <Header />
+        </div>
+        <div className="absolute top-[30%] left-[23%]">
+          <Overview />
+          <Card />
+          <Businessacc />
+          <Recommended />
+        </div>
+      </div>
     </div>
   );
 }
-
-export default App;
